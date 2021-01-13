@@ -1,0 +1,69 @@
+SENG 265 -- SUMMER 2020
+ASSIGNMENT #3 EVALUATION
+========================
+
+  Student name:   "Schanz Aaron" 
+  Student number: V00936095
+  Student login:  aaronschanz
+
+-----
+(0) Code compiled successfully.
+
+Compile successfully.
+
+
+(1) "--infile <file>" (Tests 01-07) 
+
+All tests passed
+
+(2) "--infile <file> --sort" (Tests 01-07) 
+
+All tests passed
+
+(3) "--infile <file>" (Tests 08-10) 
+
+Test 08: Large no. words per line: PASS
+Test 09: Long word: PASS
+Test 08: Large file: PASS
+
+(4) "--infile <file> --sort" (Tests 08-10) 
+
+Test 08: Large no. words per line: PASS
+Test 09: Long word: PASS
+Test 08: Large file (upper/lower case letters only): PASS
+
+-----
+
+(5) Error Codes:
+
+(a) "./word_count -> 1" 
+./word_count -> PASS
+
+(b) "./word_count --infile -> 1 " 
+./word_count --infile -> PASS
+
+(c) "python word_count.py --infile nofile -> 2" 
+./word_count --infile nofile -> PASS
+
+(d) Check malloc/realloc/calloc for NULL -> 3 
+Test *alloc() handling: (4/7) correctly handled
+FAIL: Segmentation fault occured, a failed malloc caued a segmentation.
+
+(6) Memory Leaks (valgrind)
+
+['valgrind', '--leak-check=full', './word_count', '--infile', 'cases/valgrind.txt'] -> 0 bytes lost
+
+['valgrind', '--leak-check=full', './word_count', '--infile', 'cases/valgrind.txt', '--sort'] -> 0 bytes lost
+
+----
+SUMMARY:
+{'A1': [1, 1, 1, 1, 1, 1, 1], 'D1': [1, 1, 1, 1, 1, 1, 1], 'A2': [1, 1, 1], 'D2': [1, 1, 1], 'error_codes': [1, 1, 1], 'malloc': -1, 'valgrind': [0, 0]}
+
+-----
+(7) Code formatting and structure:
+A very well put together solution with no memory leaks. Unfortunately in some cases the program does not properly handle failed malloc(s) and most critically, does not define the compiler flag required to get the program running with std=c99 (#define _POSIX_C_SOURCE 200809L). This initially resulted in all tests failing, but with the std=c99 flag relaxed all tests pass.
+
+
+-----
+GRADE:
+89%

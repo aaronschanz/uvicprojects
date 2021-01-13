@@ -1,0 +1,59 @@
+SENG 265 -- SUMMER 2020
+ASSIGNMENT #1 EVALUATION
+========================
+
+  Student name:   "Schanz Aaron" (demo)
+  Student number: V00936095
+  Student login:  aaronschanz
+
+-----
+(1) word_count.c compiles with errors; code was correctly named in a1/ 
+    
+Compiled successfully.
+
+(2) Part A (Tests 01-07) 
+
+All tests passed
+
+(3) Part B (Tests 01-07) 
+
+All tests passed
+
+(3) Part C (Tests 01-07) 
+
+7 Tests 6 Failures 0 Ignored 
+
+(4) Tests 08-10 (Parts A, B, and C)
+
+9 Tests 3 Failures 0 Ignored 
+
+(5) DIFF Tests 1-10 (Parts A, B, and C) 
+
+Part A: PASS 10 FAIL: 0
+Part B: PASS 10 FAIL: 0
+Part C: PASS 1 FAIL: 9
+
+-----
+
+(6) Command line arguementes (3 tests):
+
+All tests passed
+
+----
+SUMMARY:
+{'A': 7, 'B': 7, 'C': 1, 'input': 3, 'EVAL': 6}
+
+-----
+(7) Code formatting and structure:
+code structure contains a fair bit of duplication
+only two functions (part A and B)
+
+code understanding is good
+command line args were done well
+
+
+
+-----
+GRADE:
+76%
+    

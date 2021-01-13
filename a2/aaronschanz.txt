@@ -1,0 +1,80 @@
+SENG 265 -- SUMMER 2020
+ASSIGNMENT #2 EVALUATION
+========================
+
+  Student name:   "Schanz Aaron" 
+  Student number: V00936095
+  Student login:  aaronschanz
+
+-----
+
+(1) "--infile <file>" (Tests 01-10) 
+
+test_t01_empty_file -> ok
+test_t02_single_word -> ok
+test_t03_long_word -> ok
+test_t04_multi_words -> ok
+test_t05_multi_line -> ok
+test_t06_special_characters -> ok
+test_t07_extra_spaces -> ok
+test_t08_long_paragraph -> ok
+test_t09_long_paragraphs -> ok
+test_t10_super_long -> ok
+
+(2) "--infile <file> --sort" (Tests 01-10) 
+
+test_t01_empty_file -> ok
+test_t02_single_word -> ok
+test_t03_long_word -> ok
+test_t04_multi_words -> ok
+test_t05_multi_line -> ok
+test_t06_special_characters -> ok
+test_t07_extra_spaces -> ok
+test_t08_long_paragraph -> ok
+test_t09_long_paragraphs -> ok
+test_t10_super_long -> ok
+
+(3) "--infile <file> --sort --print-words" (Tests 01-10) 
+
+test_t01_empty_file -> ok
+test_t02_single_word -> ok
+test_t03_long_word -> ok
+test_t04_multi_words -> ok
+test_t05_multi_line -> ok
+test_t06_special_characters -> ok
+test_t07_extra_spaces -> ok
+test_t08_long_paragraph -> ok
+test_t09_long_paragraphs -> ok
+test_t10_super_long -> ok
+
+-----
+
+(5) Command line arguement robustness:
+
+(a) "python word_count.py" 
+python src/word_count.py -> PASS
+
+(b) "python word_count.py --infile" 
+python src/word_count.py --infile -> PASS
+
+(c) "python word_count.py --infile badfile" 
+python src/word_count.py --infile badfile -> PASS
+
+(d) "--infile <file> --print-words" 
+test_t04_multi_words -> FAIL
+
+
+----
+SUMMARY:
+{'A': 10, 'B': 10, 'C': 10, 'C2': 0, 'input': 3}
+
+-----
+(7) Code formatting and structure:
+code structure has a lot of duplication, try structuring in more functions and seperating by argument
+rather than by part(this caused the issue bellow, no marks deducted for structure)
+parameter parsing is good. 
+code did not consider the case where --sort is not provided but --print-words is
+
+-----
+GRADE:
+95%
